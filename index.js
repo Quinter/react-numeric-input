@@ -289,7 +289,7 @@ module.exports =
 	    }, {
 	        key: '_toNumber',
 	        value: function _toNumber(x) {
-	            var n = parseFloat(x);
+	            var n = Number(x);
 	            if (isNaN(n) || !isFinite(n)) {
 	                n = 0;
 	            }
@@ -310,9 +310,9 @@ module.exports =
 	        value: function _parse(x) {
 	            x = String(x);
 	            if (typeof this.props.parse == 'function') {
-	                return parseFloat(this.props.parse(x));
+	                return Number(this.props.parse(x));
 	            }
-	            return parseFloat(x);
+	            return Number(x);
 	        }
 	    }, {
 	        key: '_format',

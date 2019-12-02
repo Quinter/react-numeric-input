@@ -600,7 +600,7 @@ class NumericInput extends Component {
    * string).
    */
   _toNumber(x: any): number {
-    let n = parseFloat(x);
+    let n = Number(x);
     if (isNaN(n) || !isFinite(n)) {
       n = 0;
     }
@@ -630,15 +630,15 @@ class NumericInput extends Component {
   /**
    * This is used internally to parse any string into a number. It will
    * delegate to this.props.parse function if one is provided. Otherwise it
-   * will just use parseFloat.
+   * will just use Number.
    * @private
    */
   _parse(x: string): number {
     x = String(x);
     if (typeof this.props.parse == "function") {
-      return parseFloat(this.props.parse(x));
+      return Number(this.props.parse(x));
     }
-    return parseFloat(x);
+    return Number(x);
   }
 
   /**

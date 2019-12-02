@@ -464,7 +464,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	        key: '_toNumber',
 	        value: function _toNumber(x) {
-	            var n = parseFloat(x);
+	            var n = Number(x);
 	            if (isNaN(n) || !isFinite(n)) {
 	                n = 0;
 	            }
@@ -484,7 +484,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        /**
 	         * This is used internally to parse any string into a number. It will
 	         * delegate to this.props.parse function if one is provided. Otherwise it
-	         * will just use parseFloat.
+	         * will just use Number.
 	         * @private
 	         */
 
@@ -493,9 +493,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function _parse(x) {
 	            x = String(x);
 	            if (typeof this.props.parse == 'function') {
-	                return parseFloat(this.props.parse(x));
+	                return Number(this.props.parse(x));
 	            }
-	            return parseFloat(x);
+	            return Number(x);
 	        }
 
 	        /**
