@@ -72,7 +72,7 @@ module.exports =
 	var KEYCODE_UP = 38;
 	var KEYCODE_DOWN = 40;
 	var IS_BROWSER = typeof document != 'undefined';
-	var RE_NUMBER = /^[+-]?((\.\d+)|(\d+(\.\d+)?))$/;
+	var RE_NUMBER = /^[+-]?((\d+(\.\d*)?)|(\.\d+))$/;
 	var RE_INCOMPLETE_NUMBER = /^[+-]?((\d+(\.\d*)?)|(\.\d+))$/;
 
 	function addClass(element, className) {

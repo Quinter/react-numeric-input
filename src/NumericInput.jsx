@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const KEYCODE_UP = 38;
 const KEYCODE_DOWN = 40;
 const IS_BROWSER = typeof document != "undefined";
-const RE_NUMBER = /^[+-]?((\.\d+)|(\d+(\.\d+)?))$/;
+const RE_NUMBER = /^[+-]?((\d+(\.\d*)?)|(\.\d+))$/;
 const RE_INCOMPLETE_NUMBER = /^[+-]?((\d+(\.\d*)?)|(\.\d+))$/;
 
 /**
